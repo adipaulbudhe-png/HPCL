@@ -1,25 +1,25 @@
 # Parallel Sorting Using OpenMP
 
 ## Project Overview
-Implementation and comparison of Sequential Merge Sort and Parallel Merge Sort using OpenMP tasks.
+This project implements and compares Sequential Merge Sort and Parallel Merge Sort using OpenMP tasks.
 
 ## Objectives
 - Implement sequential Merge Sort.
 - Implement parallel Merge Sort using OpenMP.
-- Execute on PARAM Rudra HPC.
-- Compare execution times for different input sizes.
+- Execute the program on PARAM Rudra HPC.
+- Compare execution time for different input sizes.
 - Verify sorting correctness.
 
 ## Technologies Used
 - C++
 - OpenMP
 - GCC 12.3
-- SLURM
-- PARAM Rudra HPC
+- SLURM Workload Manager
+- PARAM Rudra HPC Cluster
 
 ## Benchmark Results
 
-| Input Size | Sequential (ms) | Parallel (ms) | Speedup |
+| Input Size | Sequential Time (ms) | Parallel Time (ms) | Speedup |
 |---:|---:|---:|---:|
 | 100,000 | 9.91737 | 4.47692 | 2.21522x |
 | 500,000 | 53.3184 | 20.9737 | 2.54216x |
@@ -29,17 +29,17 @@ All three test cases passed correctness verification.
 
 ## Execution Environment
 - Cluster: PARAM Rudra
-- Node: rdcn20
 - Partition: standard
+- Compute Node: rdcn20
 - OpenMP Threads: 4
 - SLURM Job ID: 72632
 
-## Project Files
-- merge_sort.cpp – Source code
-- merge_sort.sh – SLURM submission script
-- benchmark_results.txt – Benchmark results
-- merge_sort_72632.out – Execution log
-- merge_sort_72632.err – Error log
+## Files
+- `merge_sort.cpp` – C++ source code.
+- `merge_sort.sh` – SLURM job submission script.
+- `benchmark_results.txt` – Saved benchmark output.
+- `merge_sort_72632.out` – SLURM execution log.
+- `merge_sort_72632.err` – Error log.
 
 ## Conclusion
-The parallel implementation achieved better execution times than sequential Merge Sort across all tested input sizes, reaching an observed speedup of approximately 2.60x for one million elements.
+The parallel implementation achieved better execution times than the sequential implementation for all tested input sizes. The observed speedup increased with larger input sizes, reaching approximately 2.60x for one million elements.

@@ -1,0 +1,47 @@
+==========================================
+SLURM_CLUSTER_NAME = paramrudra
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = mit
+SLURM_JOB_ID = 72632
+SLURM_JOB_NAME = merge_sort
+SLURM_JOB_NODELIST = rdcn20
+SLURM_JOB_USER = mit104
+SLURM_JOB_UID = 55776
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 3858317
+SLURM_SUBMIT_DIR = /home/mit104/parallel_sorting
+SLURM_CPUS_ON_NODE = 4
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 3858317
+==========================================
+Starting Parallel Merge Sort
+Allocated CPUs: 4
+Running on: rdcn20
+========================================
+ PARALLEL MERGE SORT USING OPENMP
+========================================
+OpenMP Threads: 4
+
+Input Size: 100000
+Sequential Time: 9.91737 ms
+Parallel Time:   4.47692 ms
+Speedup:         2.21522x
+Correctness:     PASSED
+----------------------------------------
+Input Size: 500000
+Sequential Time: 53.3184 ms
+Parallel Time:   20.9737 ms
+Speedup:         2.54216x
+Correctness:     PASSED
+----------------------------------------
+Input Size: 1000000
+Sequential Time: 114.348 ms
+Parallel Time:   44.0103 ms
+Speedup:         2.5982x
+Correctness:     PASSED
+----------------------------------------
+Job completed.
